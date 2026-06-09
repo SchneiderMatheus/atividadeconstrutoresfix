@@ -34,9 +34,9 @@ public class Cadastro {
         this.balance -=balance -5;
     }
 
-    public static void print(int accNumber, String name, double balance) {
+    public void print() {
         System.out.println("Account data: ");
-        System.out.print("Account: "+accNumber+"Holder: "+name + "Balance: $ "+balance); 
+        System.out.print("Account: "+getAcc()+" Holder: "+getName() + " Balance: $ "+getBalance()); 
     
     }
 }

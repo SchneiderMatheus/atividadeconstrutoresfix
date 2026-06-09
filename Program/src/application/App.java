@@ -9,7 +9,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Cadastro cadastro = new Cadastro(0, null, 0);
+        
+        double balance;
 
         System.out.print("Enter account number: ");
         int accNumber = sc.nextInt();
@@ -21,19 +22,23 @@ public class App {
         String yesOrNo = sc.nextLine();
         if (yesOrNo.equals("y")) {
             System.out.println("Enter the intial deposit value: ");
-            double balance = sc.nextDouble();
+            balance = sc.nextDouble();
+        
         } else {
-            double balance = 0;
+            balance = 0;
         }
+        Cadastro cadastro = new Cadastro(accNumber, name, balance);
 
-        Cadastro.print(accNumber, name, accNumber);
+        cadastro.addBalance(balance);
+
+        cadastro.print();
 
         System.out.print("\nEnter a deposite value: ");
         cadastro.addBalance(sc.nextDouble());
 
-        Cadastro.print(accNumber, name, accNumber);
+        cadastro.print();
 
-        System.out.print("enter a withdraw value:");
+        System.out.print("\nenter a withdraw value:");
         double withdraw = sc.nextDouble();
         while (withdraw > cadastro.getBalance() -5) {
                 System.out.println("THATS MORE THAN WHAT YOU HAVE, REMEMBER IS COSTS YOU $5 TO MAKE A WITHDRAW! TRY AGAIN");
@@ -43,7 +48,7 @@ public class App {
 
         cadastro.removeBalance(withdraw);
         System.out.println();
-        Cadastro.print(accNumber, name, accNumber);
+        cadastro.print();
 
         sc.close();
     }
