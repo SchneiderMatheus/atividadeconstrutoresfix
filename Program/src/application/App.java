@@ -29,7 +29,7 @@ public class App {
         }
         Cadastro cadastro = new Cadastro(accNumber, name, balance);
 
-        cadastro.addBalance(balance);
+        //cadastro.addBalance(balance);
 
         cadastro.print();
 

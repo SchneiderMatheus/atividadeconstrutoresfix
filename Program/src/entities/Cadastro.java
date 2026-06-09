@@ -1,7 +1,7 @@
 package entities;
 
 public class Cadastro {
-    private final int accNumber;
+    private int accNumber;
     private String name;
     private double balance;
 
@@ -31,7 +31,7 @@ public class Cadastro {
         this.balance += balance;
     }
     public void removeBalance (double balance){
-        this.balance -=balance -5;
+        this.balance = (this.balance -5)-balance;
     }
 
     public void print() {
