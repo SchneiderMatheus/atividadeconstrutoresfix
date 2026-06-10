@@ -12,15 +12,16 @@ public class App {
         
         double balance;
 
-        System.out.println("Enter account number: ");
+        System.out.print("Enter account number: ");
         int accNumber = sc.nextInt();
 
-        System.out.println("Enter account holder: ");
-        String name = sc.next();
+        System.out.print("Enter account holder: ");
+        sc.nextLine();
+        String name = sc.nextLine();
 
         System.out.println("Is there an initial deposit y/n)?");
-        String yesOrNo = sc.next();
-        if (yesOrNo.equals("y")) {
+        char yesOrNo = sc.next().charAt(0);
+        if (yesOrNo == 'y') {
             System.out.println("Enter the intial deposit value: ");
             balance = sc.nextDouble();
         
