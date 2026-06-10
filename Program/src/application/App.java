@@ -32,14 +32,14 @@ public class App {
 
         //cadastro.addBalance(balance);
 
-        cadastro.print();
+        System.out.println(cadastro);
 
         System.out.print("\nEnter a deposite value: ");
         cadastro.addBalance(sc.nextDouble());
 
-        cadastro.print();
+        System.out.println(cadastro);
 
-        System.out.print("\nenter a withdraw value:");
+        System.out.print("\nEnter a withdraw value:");
         double withdraw = sc.nextDouble();
         while (withdraw > cadastro.getBalance() -5) {
                 System.out.println("THATS MORE THAN WHAT YOU HAVE, REMEMBER IS COSTS YOU $5 TO MAKE A WITHDRAW! TRY AGAIN");
@@ -49,7 +49,7 @@ public class App {
 
         cadastro.removeBalance(withdraw);
         System.out.println();
-        cadastro.print();
+        System.out.println(cadastro);
 
         sc.close();
     }
