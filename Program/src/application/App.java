@@ -42,7 +42,7 @@ public class App {
         double withdraw = sc.nextDouble();
         while (withdraw > cadastro.getBalance() -5) {
                 System.out.println("THATS MORE THAN WHAT YOU HAVE, REMEMBER IS COSTS YOU $5 TO MAKE A WITHDRAW! TRY AGAIN");
-                System.out.print("enter a withdraw value:");
+                System.out.print("Enter a withdraw value:");
                 withdraw = sc.nextDouble();
         }
 
