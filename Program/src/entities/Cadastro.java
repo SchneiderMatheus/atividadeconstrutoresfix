@@ -5,10 +5,10 @@ public class Cadastro {
     private String name;
     private double balance;
 
-    public Cadastro(int accNumber, String name, double balance){
+    public Cadastro(int accNumber, String name, double initialDeposit){
         this.accNumber = accNumber;
         this.name = name;
-        this.balance = balance;
+        addBalance(initialDeposit);
     }
 
     public void setName(String name){
@@ -20,9 +20,7 @@ public class Cadastro {
     public int getAcc(){
         return accNumber;
     }
-    public void setBalance(double balance){
-        this.balance = balance;
-    }
+    
     public double getBalance(){
         return balance;
     }
