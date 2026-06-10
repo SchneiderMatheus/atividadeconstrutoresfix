@@ -32,9 +32,8 @@ public class Cadastro {
         this.balance = (this.balance -5)-balance;
     }
 
-    public void print() {
-        System.out.println("Account data: ");
-        System.out.print("Account: "+getAcc()+" Holder: "+getName() + " Balance: $ "+getBalance()); 
-    
+    public String toString() {
+        return "Account data: \n" + 
+        "Account: " +getAcc()+", Holder: "+getName() + ", Balance: $ "+getBalance(); 
     }
 }
