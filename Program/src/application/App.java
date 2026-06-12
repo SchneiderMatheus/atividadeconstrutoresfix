@@ -10,7 +10,7 @@ public class App {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        double balance;
+        double initialDeposit;
 
         System.out.print("Enter account number: ");
         int accNumber = sc.nextInt();
@@ -23,12 +23,12 @@ public class App {
         char yesOrNo = sc.next().charAt(0);
         if (yesOrNo == 'y') {
             System.out.println("Enter the intial deposit value: ");
-            balance = sc.nextDouble();
+            initialDeposit = sc.nextDouble();
         
         } else {
-            balance = 0;
+            initialDeposit = 0;
         }
-        Cadastro cadastro = new Cadastro(accNumber, name, balance);
+        Cadastro cadastro = new Cadastro(accNumber, name, initialDeposit);
 
         //cadastro.addBalance(balance);
 
